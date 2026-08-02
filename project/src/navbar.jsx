@@ -28,9 +28,9 @@ function Navbar() {
       <nav className={"fixed top-0 inset-x-0 z-30 transition-all duration-500 " + (scrolled ? 'pt-2 sm:pt-3' : 'pt-4 sm:pt-6')}>
         <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 pb-2">
           {/* Logo */}
-          <a href="#top" className="flex items-center text-white">
-            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="CCV Propiedades"
-                 className="h-9 sm:h-10 w-auto object-contain" draggable="false"/>
+          <a href="#top" className="flex items-center gap-2 text-white">
+            <span className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-terra grid place-items-center text-ink font-display font-bold text-xs sm:text-sm shrink-0">CCV</span>
+            <span className="font-display font-semibold tracking-tight text-white text-base sm:text-lg leading-none">Propiedades</span>
           </a>
 
           {/* Desktop pill */}
@@ -75,7 +75,10 @@ function Navbar() {
       <aside className={"fixed top-0 right-0 bottom-0 z-50 w-[85%] max-w-sm bg-white/95 backdrop-blur-xl lg:hidden transition-transform duration-500 " + (open ? 'translate-x-0' : 'translate-x-full')}
              style={{ transitionTimingFunction: 'cubic-bezier(0.22,1,0.36,1)' }}>
         <div className="flex items-center justify-between px-6 py-5 border-b border-black/5">
-          <img src={(window.__resources && window.__resources.logoDark) || "assets/logo-dark.png"} alt="CCV Propiedades" className="h-9 w-auto object-contain"/>
+          <div className="flex items-center gap-2 text-ink">
+            <span className="w-8 h-8 rounded-lg bg-terra grid place-items-center text-ink font-display font-bold text-xs shrink-0">CCV</span>
+            <span className="font-display font-semibold tracking-tight text-ink text-base leading-none">Propiedades</span>
+          </div>
           <button onClick={() => setOpen(false)} className="w-9 h-9 grid place-items-center rounded-full bg-ink text-white">
             <IconX size={16}/>
           </button>

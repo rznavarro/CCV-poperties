@@ -103,7 +103,8 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-white/80">
-            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="CCV Propiedades" className="h-7 w-auto object-contain opacity-80"/>
+            <span className="w-7 h-7 rounded-lg bg-terra grid place-items-center text-ink font-display font-bold text-[10px] shrink-0">CCV</span>
+            <span className="font-display font-semibold tracking-tight text-white/90 text-sm leading-none">Propiedades</span>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-xs text-white/35">
             <a href="#" className="hover:text-white/70 transition-colors">Política de Privacidad</a>
