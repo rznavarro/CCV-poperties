@@ -1,24 +1,24 @@
 function Testimonios() {
   const items = [
     {
-      initials: 'JJ',
-      quote: 'Vendí en tres semanas al precio que pedía. El equipo lo gestionó todo — yo no tuve que hacer nada.',
-      name: 'Joannejustine Raine',
-      detail: 'Piso en Carabanchel · 245.000€ · 21 días',
+      initials: 'JR',
+      quote: 'Vendimos en pocas semanas al precio que esperábamos. El equipo gestionó todo — nosotros no tuvimos que preocuparnos de nada.',
+      name: 'J. Ramírez',
+      detail: 'Departamento en Las Condes · venta',
       featured: false,
     },
     {
       initials: 'AG',
-      quote: 'Rapidez y profesionalidad excepcionales. Nos acompañaron incluso después de la firma.',
-      name: 'Alicia Gutiérrez Hernández',
-      detail: 'Dúplex en Vallecas · 198.000€ · 18 días',
+      quote: 'Rapidez y profesionalismo excepcionales. Nos acompañaron incluso después de la firma.',
+      name: 'A. Gutiérrez',
+      detail: 'Casa en Rancagua · venta',
       featured: true,
     },
     {
       initials: 'MC',
-      quote: 'Cerrado en tres semanas con total transparencia. Nunca esperé tan poco para vender tan bien.',
-      name: 'Marta Calzada Pinillos',
-      detail: 'Apartamento en Lavapiés · 310.000€ · 22 días',
+      quote: 'Arrendaron nuestro departamento con total transparencia y se encargaron del estudio de antecedentes de los arrendatarios.',
+      name: 'M. Contreras',
+      detail: 'Departamento en Providencia · arriendo',
       featured: false,
     },
   ];
@@ -30,14 +30,14 @@ function Testimonios() {
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6">
               <IconStar size={12} className="text-terra"/>
-              <span className="text-[11px] font-medium text-white/75 tracking-wide uppercase">4,9 / 5 en Google</span>
+              <span className="text-[11px] font-medium text-white/75 tracking-wide uppercase">Clientes de CCV Propiedades</span>
             </div>
             <h2 className="font-display font-normal text-white text-3xl sm:text-4xl md:text-5xl tracking-tightd max-w-xl leading-[1.05]">
-              Lo que dicen quienes ya vendieron.
+              Lo que dicen quienes ya confiaron en nosotros.
             </h2>
           </div>
           <p className="text-white/55 text-sm sm:text-base max-w-sm mt-5 md:mt-0">
-            Cada testimonio incluye el barrio, el precio de venta y los días que tardamos en cerrar la operación. Prueba real, no copy.
+            Cada testimonio incluye la comuna y el tipo de operación. Prueba real, no copy.
           </p>
         </div>
 
@@ -77,14 +77,17 @@ function Testimonios() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-center">
           <div className="flex items-center gap-2.5">
             <div className="flex gap-0.5">{Array.from({length:5}).map((_,k)=><IconStar key={k} size={13} className="text-terra"/>)}</div>
-            <span className="text-white/70 text-sm font-medium">4,9 sobre 5</span>
-            <span className="text-white/35 text-xs">· 127 reseñas en Google</span>
+            <span className="text-white/70 text-sm font-medium">Reseñas verificadas</span>
+            <span className="text-white/35 text-xs">· Google Business</span>
           </div>
           <div className="text-white/70 text-sm font-medium">
-            <span className="text-white">98%</span>
-            <span className="text-white/40"> de clientes nos recomendarían</span>
+            <span className="text-white">Amable, profesional y cercano</span>
+            <span className="text-white/40"> — así nos describen nuestros clientes</span>
           </div>
         </div>
+        <p className="text-[10px] text-white/25 text-center mt-6 max-w-md mx-auto leading-relaxed">
+          Testimonios de ejemplo — reemplázalos con reseñas reales de clientes de CCV Propiedades antes de publicar.
+        </p>
       </div>
     </section>
   );

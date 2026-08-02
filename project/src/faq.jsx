@@ -4,44 +4,44 @@ function FAQAccordion() {
   const [open, setOpen] = useStateFAQ(0);
   const items = [
     {
-      q: '¿Qué tengo que hacer para contratar vuestros servicios?',
-      a: 'Solo tienes que solicitar una valoración gratuita. Un asesor visitará tu piso, te dará un precio realista basado en ventas reales de la zona y, si decides contratarnos, firmamos el contrato del Plan SIN. Sin permanencias, sin pagos por adelantado.',
+      q: '¿Qué tengo que hacer para vender o arrendar con CCV?',
+      a: 'Solo tienes que solicitar una tasación gratuita. Un asesor visitará tu propiedad, te dará un precio realista basado en el mercado de tu comuna y, si decides trabajar con nosotros, coordinamos los siguientes pasos. Sin pagos por adelantado.',
     },
     {
-      q: '¿Qué otros servicios puedo contratar?',
-      a: 'Además del Plan SIN, ofrecemos certificado energético, gestión de la cédula de habitabilidad, home staging, y asesoría hipotecaria para los compradores. Todos como servicios opcionales y siempre con precio cerrado por adelantado.',
+      q: '¿Qué servicios ofrece CCV Propiedades?',
+      a: 'Corretaje de venta y arriendo de casas, departamentos, oficinas, locales, parcelas y terrenos. Además, administración de propiedades, estudio de antecedentes de compradores y arrendatarios, y gestión de toda la documentación hasta la firma.',
+    },
+    {
+      q: '¿Cobran comisión? ¿Cuánto?',
+      a: 'Sí, como todo corredor de propiedades. La comisión se calcula según el tipo de operación y se confirma contigo antes de firmar cualquier cosa — nada de sorpresas al final. Puedes simular una referencia en nuestra calculadora más arriba.',
     },
     {
       q: '¿Hay que pagar por adelantado?',
-      a: 'No. El Plan SIN se paga únicamente cuando se vende el piso, justo antes de la firma en notaría. Si tu piso no se vende, no pagas nada. Cero riesgo para el propietario.',
+      a: 'No. La comisión se cobra únicamente cuando la venta o el arriendo se concreta. Si tu propiedad no se vende o arrienda, no pagas nada.',
     },
     {
-      q: '¿No cobráis comisiones?',
-      a: 'Correcto: no cobramos comisión porcentual sobre el precio de venta. Nuestro precio es fijo: 1.500€ + IVA, vendas por 150.000€ o por 600.000€. Eso es lo que significa "Plan SIN".',
+      q: '¿En qué zonas trabajan?',
+      a: 'Trabajamos principalmente en la Región Metropolitana y en la VI Región de O’Higgins, con oficina en Las Condes, Santiago.',
     },
     {
-      q: '¿Qué ocurre si no se vende?',
-      a: 'Si no se vende, no pagas nada. Cuando aceptas nuestra valoración trabajamos para encontrar comprador en el menor tiempo posible. Si transcurridos los meses pactados no hemos vendido, puedes cancelar sin coste alguno.',
+      q: '¿Qué es el estudio de antecedentes?',
+      a: 'Es la revisión de antecedentes comerciales y financieros de los interesados en comprar o arrendar tu propiedad, para asegurarnos de que la operación sea segura antes de avanzar.',
+    },
+    {
+      q: '¿Tengo que estar presente en las visitas?',
+      a: 'No necesariamente. Coordinamos la agenda de visitas y filtramos a los interesados serios. Tú decides si quieres estar presente o prefieres que nuestro equipo se encargue.',
+    },
+    {
+      q: '¿Administran propiedades en arriendo?',
+      a: 'Sí. Ofrecemos administración de propiedades para propietarios que arriendan: cobro de rentas, seguimiento del contrato y gestión de incidencias con el arrendatario.',
+    },
+    {
+      q: '¿Cómo publican mi propiedad?',
+      a: 'Con reportaje fotográfico y de vídeo profesional, más plano del inmueble, publicado en los principales portales inmobiliarios de Chile en menos de 48 horas.',
     },
     {
       q: '¿Puedo poner el precio que quiera?',
-      a: 'Sí. La valoración que te ofrecemos es una recomendación basada en ventas reales y datos de mercado, pero la decisión final del precio de salida es siempre tuya. Lo importante es que sea un precio realista para que el piso se venda en un tiempo razonable.',
-    },
-    {
-      q: '¿Qué es la Agenda de visitas?',
-      a: 'Es el servicio por el que gestionamos nosotros todas las llamadas, filtramos a los compradores serios y coordinamos las visitas en el horario que mejor te convenga. Tú no tienes que atender al teléfono ni estar presente en las visitas.',
-    },
-    {
-      q: '¿Tendré que enseñar yo el piso?',
-      a: 'No. Nuestros asesores se encargan de todas las visitas al piso. Tú decides si quieres estar presente o no. La mayoría de propietarios prefiere no estar para que el comprador se sienta más cómodo.',
-    },
-    {
-      q: '¿Cómo puede ser tan barato el Plan SIN?',
-      a: 'Porque hemos eliminado de la operación todo lo que encarece a las agencias tradicionales: comerciales a comisión, oficinas en la calle, publicidad masiva. Trabajamos con un equipo experto, herramientas profesionales y procesos eficientes — y trasladamos el ahorro al propietario.',
-    },
-    {
-      q: 'Hay otros aún más baratos. ¿Por qué contar con vosotros?',
-      a: 'Porque incluimos absolutamente todo lo necesario para vender bien: fotografía y vídeo profesional, plano, publicación en todos los portales, gestión de visitas, negociación, asesoría legal y firma en notaría. Otros servicios "low cost" cobran aparte cada uno de estos extras y al final terminan costando más.',
+      a: 'Sí. La tasación que te entregamos es una recomendación basada en el mercado de tu comuna, pero la decisión final del precio de salida es siempre tuya.',
     },
   ];
 
@@ -89,10 +89,10 @@ function FAQAccordion() {
           <p className="text-white text-sm font-medium">¿Tu pregunta no está aquí?</p>
           <p className="text-white/55 text-xs mt-1.5 mb-4">Llámanos o escríbenos por WhatsApp y la respondemos al momento.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <a href="tel:+34911192966" className="inline-flex items-center gap-2 bg-white text-ink text-xs font-semibold px-4 py-2 rounded-full hover:bg-white/90 transition-colors">
-              <IconPhone size={13}/> 91 119 29 66
+            <a href="tel:+56985022517" className="inline-flex items-center gap-2 bg-white text-ink text-xs font-semibold px-4 py-2 rounded-full hover:bg-white/90 transition-colors">
+              <IconPhone size={13}/> +56 9 8502 2517
             </a>
-            <a href="https://wa.me/34911192966?text=Hola,%20quiero%20información%20sobre%20vender%20mi%20piso"
+            <a href="https://wa.me/56985022517?text=Hola%20CCV%20Propiedades%2C%20estoy%20interesad%40%20en%20una%20propiedad."
                target="_blank" rel="noopener"
                className="inline-flex items-center gap-2 bg-[#25D366] text-white text-xs font-semibold px-4 py-2 rounded-full hover:bg-[#20BA5C] transition-colors">
               <IconMessageCircle size={13}/> WhatsApp

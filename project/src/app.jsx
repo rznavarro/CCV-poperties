@@ -10,6 +10,7 @@ function App() {
       <FAQAccordion/>
       <CTAFinal/>
       <Footer/>
+      <WhatsAppButton/>
     </div>
   );
 }

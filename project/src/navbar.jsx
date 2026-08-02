@@ -17,7 +17,7 @@ function Navbar() {
 
   const links = [
     ['Inicio',       '#top'],
-    ['El Plan SIN',  '#plan'],
+    ['Servicios',    '#plan'],
     ['Proceso',      '#proceso'],
     ['Testimonios',  '#testimonios'],
     ['FAQ',          '#faq'],
@@ -29,7 +29,7 @@ function Navbar() {
         <div className="flex justify-between items-center px-4 sm:px-6 md:px-10 pb-2">
           {/* Logo */}
           <a href="#top" className="flex items-center text-white">
-            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="Tu Piso Servicios Inmobiliarios"
+            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="CCV Propiedades"
                  className="h-9 sm:h-10 w-auto object-contain" draggable="false"/>
           </a>
 
@@ -51,9 +51,9 @@ function Navbar() {
 
           {/* Right cluster */}
           <div className="flex items-center gap-3">
-            <a href="tel:+34911192966" className="hidden sm:flex items-center gap-2 text-[13px] font-medium text-white/85 hover:text-white transition-colors">
+            <a href="tel:+56985022517" className="hidden sm:flex items-center gap-2 text-[13px] font-medium text-white/85 hover:text-white transition-colors">
               <IconPhoneCall size={15} className="text-terra"/>
-              <span>91 119 29 66</span>
+              <span>+56 9 8502 2517</span>
             </a>
             <button onClick={() => setOpen(o => !o)} aria-label="Menú"
                     className="lg:hidden relative w-9 h-9 grid place-items-center rounded-full border border-white/15 bg-white/5 text-white">
@@ -75,7 +75,7 @@ function Navbar() {
       <aside className={"fixed top-0 right-0 bottom-0 z-50 w-[85%] max-w-sm bg-white/95 backdrop-blur-xl lg:hidden transition-transform duration-500 " + (open ? 'translate-x-0' : 'translate-x-full')}
              style={{ transitionTimingFunction: 'cubic-bezier(0.22,1,0.36,1)' }}>
         <div className="flex items-center justify-between px-6 py-5 border-b border-black/5">
-          <img src={(window.__resources && window.__resources.logoDark) || "assets/logo-dark.png"} alt="Tu Piso" className="h-9 w-auto object-contain"/>
+          <img src={(window.__resources && window.__resources.logoDark) || "assets/logo-dark.png"} alt="CCV Propiedades" className="h-9 w-auto object-contain"/>
           <button onClick={() => setOpen(false)} className="w-9 h-9 grid place-items-center rounded-full bg-ink text-white">
             <IconX size={16}/>
           </button>
@@ -93,10 +93,10 @@ function Navbar() {
              className={"mt-6 bg-ink text-white text-center text-sm font-semibold py-3.5 rounded-full transition-all duration-500 " + (open ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0')}>
             Valoración Gratuita
           </a>
-          <a href="tel:+34911192966" onClick={() => setOpen(false)}
+          <a href="tel:+56985022517" onClick={() => setOpen(false)}
              style={{ transitionDelay: open ? '570ms' : '0ms' }}
              className={"mt-3 flex items-center justify-center gap-2 text-sm font-medium text-ink/70 py-2 transition-all duration-500 " + (open ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0')}>
-            <IconPhone size={14}/> 91 119 29 66
+            <IconPhone size={14}/> +56 9 8502 2517
           </a>
         </nav>
       </aside>

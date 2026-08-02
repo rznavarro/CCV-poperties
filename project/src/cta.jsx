@@ -14,15 +14,15 @@ function CTAFinal() {
       <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-terra/10 blur-3xl pointer-events-none"/>
       <div className="relative max-w-2xl mx-auto px-4 sm:px-6 md:px-10 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 mb-6">
-          <IconTrendingDown size={13} className="text-terra"/>
-          <span className="text-[11px] font-medium text-white/75 tracking-wide uppercase">Última oportunidad</span>
+          <IconShield size={13} className="text-terra"/>
+          <span className="text-[11px] font-medium text-white/75 tracking-wide uppercase">Hablemos de tu propiedad</span>
         </div>
         <h2 className="font-display font-normal text-white text-4xl sm:text-5xl md:text-6xl tracking-tightd leading-[1.02]">
-          No regales tu dinero.<br/>
-          <span className="text-terra">Vende inteligente.</span>
+          Conversemos sobre<br/>
+          <span className="text-terra">tu propiedad.</span>
         </h2>
         <p className="text-white/65 text-sm sm:text-base leading-relaxed max-w-md mx-auto mt-6">
-          Valoración gratuita de tu piso en Madrid. Sin compromiso. Sin presión. Sin comisiones.
+          Tasación gratuita en Santiago y la VI Región. Sin compromiso, sin presión.
         </p>
 
         <div className="mt-10 max-w-md mx-auto bg-ink border border-white/10 rounded-2xl p-6 sm:p-7 text-left">
@@ -36,7 +36,7 @@ function CTAFinal() {
               <div className="grid sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-semibold text-white/45 uppercase tracking-widest mb-2">Teléfono</label>
-                  <input required type="tel" placeholder="612 345 678"
+                  <input required type="tel" placeholder="+56 9 1234 5678"
                          className="ring-terra w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/35 focus:outline-none transition-colors"/>
                 </div>
                 <div>
@@ -45,16 +45,26 @@ function CTAFinal() {
                          className="ring-terra w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/35 focus:outline-none transition-colors"/>
                 </div>
               </div>
-              <div>
-                <label className="block text-[11px] font-semibold text-white/45 uppercase tracking-widest mb-2">
-                  Dirección del piso <span className="text-white/30 normal-case font-normal tracking-normal">(opcional)</span>
-                </label>
-                <input type="text" placeholder="Ej. Calle Toledo, 25 · Madrid"
-                       className="ring-terra w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/35 focus:outline-none transition-colors"/>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[11px] font-semibold text-white/45 uppercase tracking-widest mb-2">Operación</label>
+                  <select className="ring-terra w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                    <option value="venta">Venta</option>
+                    <option value="arriendo">Arriendo</option>
+                    <option value="administracion">Administración</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-white/45 uppercase tracking-widest mb-2">
+                    Comuna <span className="text-white/30 normal-case font-normal tracking-normal">(opcional)</span>
+                  </label>
+                  <input type="text" placeholder="Ej. Las Condes"
+                         className="ring-terra w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/35 focus:outline-none transition-colors"/>
+                </div>
               </div>
               <button disabled={submitting} type="submit"
-                      className="w-full bg-terra hover:bg-terra-l text-white font-semibold rounded-xl py-4 text-sm transition-colors flex items-center justify-center gap-2 mt-2 disabled:opacity-60">
-                {submitting ? 'Enviando…' : <>Quiero mi valoración gratuita <IconArrowRight size={15}/></>}
+                      className="w-full bg-terra hover:bg-terra-l text-ink font-semibold rounded-xl py-4 text-sm transition-colors flex items-center justify-center gap-2 mt-2 disabled:opacity-60">
+                {submitting ? 'Enviando…' : <>Quiero mi tasación gratuita <IconArrowRight size={15}/></>}
               </button>
               <p className="text-[10.5px] text-white/35 text-center mt-3 leading-relaxed">
                 Respondemos en menos de 24h · Datos protegidos · Sin spam
@@ -70,7 +80,7 @@ function CTAFinal() {
                 Un asesor te llamará en menos de 24h al teléfono que has indicado.
               </p>
               <div className="mt-5 pt-5 border-t border-white/8 text-xs text-white/45">
-                ¿Prefieres no esperar? Llámanos al <a href="tel:+34911192966" className="text-terra hover:text-terra-l">91 119 29 66</a>
+                ¿Prefieres no esperar? Llámanos al <a href="tel:+56985022517" className="text-terra hover:text-terra-l">+56 9 8502 2517</a>
               </div>
             </div>
           )}
@@ -78,9 +88,9 @@ function CTAFinal() {
 
         {/* Trust footer */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/45">
-          <span className="inline-flex items-center gap-1.5"><IconShield size={12} className="text-terra"/> Datos protegidos LOPD</span>
-          <span className="inline-flex items-center gap-1.5"><IconCheck size={12} className="text-terra"/> Sin permanencias</span>
-          <span className="inline-flex items-center gap-1.5"><IconCheck size={12} className="text-terra"/> Pago solo si vendes</span>
+          <span className="inline-flex items-center gap-1.5"><IconShield size={12} className="text-terra"/> Datos protegidos (Ley 19.628)</span>
+          <span className="inline-flex items-center gap-1.5"><IconCheck size={12} className="text-terra"/> Sin pagos por adelantado</span>
+          <span className="inline-flex items-center gap-1.5"><IconCheck size={12} className="text-terra"/> Se paga solo si se concreta</span>
         </div>
       </div>
     </section>
@@ -93,7 +103,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-white/80">
-            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="Tu Piso" className="h-7 w-auto object-contain opacity-80"/>
+            <img src={(window.__resources && window.__resources.logoLight) || "assets/logo-light.png"} alt="CCV Propiedades" className="h-7 w-auto object-contain opacity-80"/>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-xs text-white/35">
             <a href="#" className="hover:text-white/70 transition-colors">Política de Privacidad</a>
@@ -101,10 +111,10 @@ function Footer() {
             <a href="#" className="hover:text-white/70 transition-colors">Cookies</a>
           </div>
           <div className="text-xs text-white/35">
-            <a href="tel:+34911192966" className="hover:text-white/70 transition-colors">91 119 29 66</a>
+            <a href="tel:+56985022517" className="hover:text-white/70 transition-colors">+56 9 8502 2517</a>
           </div>
         </div>
-        <p className="text-[11px] text-white/25 text-center mt-6">© 2026 Tu Piso Inmobiliaria · Madrid, España</p>
+        <p className="text-[11px] text-white/25 text-center mt-6">© 2026 CCV Propiedades · Los Militares 5620, Of. 1003, Las Condes, Santiago</p>
       </div>
     </footer>
   );
@@ -117,7 +127,7 @@ function WhatsAppButton() {
     return () => clearTimeout(t);
   }, []);
   return (
-    <a href="https://wa.me/34911192966?text=Hola,%20quiero%20información%20sobre%20vender%20mi%20piso"
+    <a href="https://wa.me/56985022517?text=Hola%20CCV%20Propiedades%2C%20estoy%20interesad%40%20en%20una%20propiedad."
        target="_blank" rel="noopener"
        aria-label="WhatsApp"
        className={"fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 group transition-all duration-500 " + (show ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0')}>

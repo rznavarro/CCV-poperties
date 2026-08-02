@@ -1,15 +1,17 @@
 function ProcesoTimeline() {
   const pasos = [
-    { num: '01', Icon: IconCamera,    title: 'Visita y valoración',
-      body: 'Un asesor visita tu piso y te da una valoración profesional basada en ventas reales de la zona. Sin compromiso.' },
+    { num: '01', Icon: IconCamera,    title: 'Visita y tasación',
+      body: 'Un asesor visita tu propiedad y entrega una tasación realista basada en el mercado de tu comuna. Sin compromiso.' },
     { num: '02', Icon: IconImage,     title: 'Reportaje profesional',
-      body: 'Fotografía y vídeo de alta calidad. Plano del inmueble. Todo incluido en los 1.500€.' },
+      body: 'Fotografía y vídeo de alta calidad, más plano del inmueble, listos para publicar.' },
     { num: '03', Icon: IconGlobe,     title: 'Publicación en portales',
-      body: 'Tu piso en Idealista, Fotocasa, Habitaclia y más en menos de 48 horas.' },
-    { num: '04', Icon: IconUsers,     title: 'Visitas y negociación',
-      body: 'Gestionamos todas las llamadas, filtramos compradores serios y negociamos el mejor precio para ti.' },
-    { num: '05', Icon: IconFileCheck, title: 'Firma y post-venta',
-      body: 'Te acompañamos en notaría y resolvemos cualquier gestión después de la firma.' },
+      body: 'Tu propiedad en Portalinmobiliario, Yapo, TocToc y más en menos de 48 horas.' },
+    { num: '04', Icon: IconFileCheck, title: 'Estudio de antecedentes',
+      body: 'Revisamos antecedentes comerciales y financieros de compradores o arrendatarios antes de avanzar.' },
+    { num: '05', Icon: IconUsers,     title: 'Visitas y negociación',
+      body: 'Coordinamos las visitas, filtramos interesados serios y negociamos el mejor precio para ti.' },
+    { num: '06', Icon: IconShield,    title: 'Documentación y firma',
+      body: 'Preparamos toda la documentación y te acompañamos hasta la firma. Seguimos disponibles después del cierre.' },
   ];
 
   return (
@@ -24,26 +26,26 @@ function ProcesoTimeline() {
             ¿Qué pasa después de contactarnos?
           </h2>
           <p className="text-white/55 text-sm sm:text-base mt-5 max-w-lg mx-auto">
-            Un proceso transparente, sin sorpresas. Desde la primera visita hasta la firma en notaría.
+            Un proceso transparente, sin sorpresas. Desde la primera visita hasta la firma.
           </p>
         </div>
 
         {/* Desktop horizontal timeline */}
         <div className="hidden md:block relative">
-          <div className="absolute top-[34px] left-[6%] right-[6%] border-t border-dashed border-white/12"/>
-          <div className="grid grid-cols-5 gap-4 relative">
+          <div className="absolute top-[30px] left-[4%] right-[4%] border-t border-dashed border-white/12"/>
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-3 relative">
             {pasos.map((p, i) => (
               <div key={i} className="text-center px-2">
                 <div className="relative inline-grid place-items-center mb-5">
-                  <div className="w-[68px] h-[68px] rounded-full bg-ink border border-white/10 grid place-items-center">
-                    <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 grid place-items-center">
-                      <p.Icon size={20} className="text-terra"/>
+                  <div className="w-14 h-14 rounded-full bg-ink border border-white/10 grid place-items-center">
+                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 grid place-items-center">
+                      <p.Icon size={17} className="text-terra"/>
                     </div>
                   </div>
                 </div>
                 <div className="text-[10px] font-semibold text-white/25 tracking-[0.22em] mb-2">PASO {p.num}</div>
-                <h3 className="font-semibold text-white text-[15px] mb-2 tracking-tight">{p.title}</h3>
-                <p className="text-[12.5px] text-white/50 leading-relaxed">{p.body}</p>
+                <h3 className="font-semibold text-white text-[14px] mb-2 tracking-tight">{p.title}</h3>
+                <p className="text-[12px] text-white/50 leading-relaxed">{p.body}</p>
               </div>
             ))}
           </div>

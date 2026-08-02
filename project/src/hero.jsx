@@ -14,7 +14,7 @@ function AnimatedHeadline({ line1, line2 }) {
       <span key={i}
             className={"hero-char " + (armed ? 'in' : '') + (accent ? ' text-terra' : '')}
             style={{ transitionDelay: armed ? (baseDelay + i * 28) + 'ms' : '0ms' }}>
-        {c === ' ' ? '\u00A0' : c}
+        {c === ' ' ? ' ' : c}
       </span>
     ));
   };
@@ -35,13 +35,13 @@ function HeroForm() {
     setTimeout(() => { setSubmitting(false); setSent(true); }, 700);
   };
   return (
-    <div className="hidden sm:block absolute right-4 sm:right-6 md:right-10 bottom-6 sm:bottom-8 md:bottom-10 w-[300px] z-10">
+    <div className="hidden sm:block absolute right-4 sm:right-6 md:right-10 bottom-24 sm:bottom-24 md:bottom-28 w-[300px] z-10">
       <div className="glass-edge liquid rounded-2xl p-5 border border-white/20"
            style={{ background: 'rgba(255,255,255,0.10)' }}>
         {!sent ? (
           <>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-white font-semibold text-sm tracking-tight">Solicita valoración gratuita</h3>
+              <h3 className="text-white font-semibold text-sm tracking-tight">Solicita tu tasación gratuita</h3>
               <span className="text-[10px] font-semibold tracking-widest text-terra uppercase">24h</span>
             </div>
             <form onSubmit={submit} className="space-y-2.5">
@@ -53,7 +53,7 @@ function HeroForm() {
                      className="ring-terra w-full bg-white/8 border border-white/20 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-white/40 focus:outline-none transition-colors"/>
               <button disabled={submitting} type="submit"
                       className="w-full bg-white hover:bg-white/90 text-ink text-sm font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 disabled:opacity-60">
-                {submitting ? 'Enviando…' : <>Quiero mi valoración <IconArrowRight size={14}/></>}
+                {submitting ? 'Enviando…' : <>Quiero mi tasación <IconArrowRight size={14}/></>}
               </button>
               <p className="text-[10px] text-white/55 text-center mt-2 leading-relaxed">
                 Te llamamos en menos de 24h · Sin compromiso
@@ -90,10 +90,10 @@ function HeroSection() {
       <div className="absolute inset-0 z-0 bg-black/45 pointer-events-none"/>
       {/* Layer: vignette */}
       <div className="absolute inset-0 z-0 pointer-events-none"
-           style={{ background: 'radial-gradient(120% 80% at 50% 30%, transparent 0%, rgba(0,0,0,0.55) 100%)' }}/>
+           style={{ background: 'radial-gradient(120% 80% at 50% 30%, transparent 0%, rgba(2,42,90,0.45) 100%)' }}/>
       {/* Layer: fade bottom */}
       <div className="absolute inset-x-0 bottom-0 h-72 z-0 pointer-events-none"
-           style={{ background: 'linear-gradient(to top, #0A0A0A 0%, rgba(10,10,10,0.6) 50%, transparent 100%)' }}/>
+           style={{ background: 'linear-gradient(to top, #070B12 0%, rgba(7,11,18,0.6) 50%, transparent 100%)' }}/>
 
       <Navbar/>
 
@@ -105,21 +105,21 @@ function HeroSection() {
           <div className="glass-edge inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/20"
                style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(8px)' }}>
             <span className="w-1.5 h-1.5 rounded-full bg-terra animate-pulse"/>
-            <span className="text-[11px] font-medium text-white/90 tracking-wide">Inmobiliaria en Madrid · desde 2017</span>
+            <span className="text-[11px] font-medium text-white/90 tracking-wide">Corretaje de Propiedades · RM y VI Región</span>
           </div>
         </div>
 
-        <AnimatedHeadline line1="Vende tu piso en Madrid" line2="sin pagar comisión."/>
+        <AnimatedHeadline line1="Vende o arrienda" line2="tu propiedad hoy."/>
 
         <p className={"mt-7 sm:mt-9 max-w-md text-center mx-auto text-white/80 text-sm sm:text-base md:text-lg leading-relaxed fade-in " + (armed ? 'in' : '')}
            style={{ transitionDelay: armed ? '1500ms' : '0ms' }}>
-          Precio fijo <span className="text-white font-medium">1.500€ + IVA</span>. Sin letra pequeña. Sin exclusivas.
-          Pagas <span className="text-white font-medium">solo si vendes</span>.
+          Te acompañamos en cada etapa: <span className="text-white font-medium">tasación</span>, estudio de antecedentes y
+          documentación. Servicio <span className="text-white font-medium">cercano y transparente</span>, de principio a fin.
         </p>
 
         <ul className={"flex gap-x-6 gap-y-2 mt-7 justify-center flex-wrap fade-in " + (armed ? 'in' : '')}
             style={{ transitionDelay: armed ? '1700ms' : '0ms' }}>
-          {['Precio fijo','Sin riesgo','Todo incluido','Sin exclusivas'].map(t => (
+          {['Venta y arriendo','Estudio de antecedentes','Documentación completa','Atención personalizada'].map(t => (
             <li key={t} className="text-[11px] sm:text-xs font-semibold text-white/85 flex items-center gap-1.5">
               <IconCheck size={14} className="text-terra"/>{t}
             </li>
@@ -130,10 +130,10 @@ function HeroSection() {
         <div className={"sm:hidden flex flex-col gap-3 mt-10 fade-in " + (armed ? 'in' : '')}
              style={{ transitionDelay: armed ? '1900ms' : '0ms' }}>
           <a href="#cta" className="bg-white hover:bg-white/90 text-ink text-sm font-semibold py-3.5 rounded-full text-center transition-colors">
-            Valoración Gratuita
+            Tasación Gratuita
           </a>
-          <a href="tel:+34911192966" className="flex items-center justify-center gap-2 text-white/80 text-sm font-medium">
-            <IconPhone size={14}/> 91 119 29 66
+          <a href="tel:+56985022517" className="flex items-center justify-center gap-2 text-white/80 text-sm font-medium">
+            <IconPhone size={14}/> +56 9 8502 2517
           </a>
         </div>
       </div>
@@ -142,21 +142,23 @@ function HeroSection() {
       <div className={"absolute left-4 right-4 sm:right-auto sm:left-6 md:left-10 bottom-6 sm:bottom-8 md:bottom-10 max-w-xs z-10 hidden sm:block fade-in " + (armed ? 'in' : '')}
            style={{ transitionDelay: armed ? '2100ms' : '0ms' }}>
         <div className="flex items-center gap-2 text-white mb-3">
-          <IconTrendingDown size={16} className="text-terra"/>
-          <span className="text-sm font-semibold tracking-tight">Plan SIN Comisiones™</span>
+          <IconShield size={16} className="text-terra"/>
+          <span className="text-sm font-semibold tracking-tight">Corredores con respaldo y experiencia</span>
         </div>
         <p className="text-white/80 text-xs leading-relaxed mb-5 font-medium max-w-[18rem]">
-          Ahorra entre <span className="text-white font-semibold">9.000€</span> y <span className="text-white font-semibold">25.000€</span> en la venta de tu piso. Precio fijo. Siempre.
+          Te asesoramos desde la tasación hasta la firma, resguardando siempre tus intereses. Sin letra chica.
         </p>
         <div className="flex items-center gap-4">
           <a href="#calc" className="bg-white hover:bg-white/90 text-ink text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
-            Calcular ahorro
+            Simular comisión
           </a>
-          <a href="tel:+34911192966" className="text-white/80 hover:text-white text-sm font-semibold flex items-center gap-1.5 transition-colors">
+          <a href="tel:+56985022517" className="text-white/80 hover:text-white text-sm font-semibold flex items-center gap-1.5 transition-colors">
             <IconPhone size={14}/> Llamar
           </a>
         </div>
       </div>
+
+      <HeroForm/>
 
     </section>
   );
