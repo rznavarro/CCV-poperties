@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Tu Piso Inmobiliaria · Vende tu piso en Madrid sin comisión</title>
+
+<meta name="ext-resource-dependency" content="assets/hero.mp4" data-resource-id="heroVideo" />
+<meta name="ext-resource-dependency" content="assets/logo-light.png" data-resource-id="logoLight" />
+<meta name="ext-resource-dependency" content="assets/logo-dark.png" data-resource-id="logoDark" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          display: ['"Neue Haas Grotesk Display Pro"','"Inter"','"Helvetica Neue"','Helvetica','Arial','sans-serif'],
+          sans:    ['"Inter"','"Neue Haas Grotesk Text Pro"','"Helvetica Neue"','Helvetica','Arial','sans-serif'],
+        },
+        colors: {
+          terra:      '#C4714A',
+          'terra-l':  '#D4896A',
+          'terra-d':  '#A45830',
+          'ink':      '#0A0A0A',
+          'ink-mid':  '#1a1a1a',
+          'ink-soft': '#2a2a2a',
+          'btn-left': '#3a2a1e',
+          'btn-left-h': '#2a1e14',
+        },
+        letterSpacing: {
+          tightd: '-0.035em',
+          tightdd:'-0.04em',
+        }
+      }
+    }
+  };
+</script>
+
+<style>
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    background: #0A0A0A;
+    font-family: 'Inter','Neue Haas Grotesk Display Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-feature-settings: 'cv11','ss01','ss03';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+  }
+  /* Liquid glass border — for the nav pill + tag cards */
+  .glass-edge { position: relative; isolation: isolate; }
+  .glass-edge::before {
+    content: '';
+    position: absolute; inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.05) 35%, rgba(255,255,255,0.04) 65%, rgba(255,255,255,0.30));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+  }
+  .liquid {
+    background: rgba(0,0,0,0.4);
+    background-blend-mode: luminosity;
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.10);
+  }
+  /* Hide number input arrows */
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+  /* Hero headline char animation */
+  .hero-char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: opacity 500ms ease, transform 500ms ease;
+    white-space: pre;
+  }
+  .hero-char.in { opacity: 1; transform: translateX(0); }
+  .fade-in { opacity: 0; transition: opacity 1000ms ease, transform 1000ms ease; transform: translateY(8px); }
+  .fade-in.in { opacity: 1; transform: translateY(0); }
+  /* Marquee for portales */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-track { animation: marquee 40s linear infinite; will-change: transform; }
+  /* Custom focus ring */
+  .ring-terra:focus { border-color: rgba(196,113,74,0.6) !important; box-shadow: 0 0 0 3px rgba(196,113,74,0.10); outline: none; }
+  /* Scroll-smooth */
+  html { scroll-behavior: smooth; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#0A0A0A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0A0A0A"/>
+    <g transform="translate(600 340)">
+      <path d="M-120 40 L-60 -40 L0 40 Z" fill="none" stroke="#C4714A" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M0 40 L60 -40 L120 40 Z" fill="#C4714A"/>
+    </g>
+    <text x="600" y="500" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="64" font-weight="600" fill="#FFFFFF" letter-spacing="-2">Tu Piso</text>
+    <text x="600" y="560" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="26" font-weight="400" fill="#C4714A" letter-spacing="3">SIN COMISIÓN</text>
+  </svg>
+</template>
+
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="src/icons.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/boomerang.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/navbar.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/hero.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/calculadora.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/trustbar.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/proceso.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/servicios.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/testimonios.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/faq.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/cta.jsx"></script>
+<script type="text/babel" data-presets="react" src="src/app.jsx"></script>
+</body>
+</html>
